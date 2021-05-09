@@ -1,0 +1,8 @@
+<p [ngbPopover]="popContent" [popoverTitle]="popTitle" [openDelay]="300" [closeDelay]="500" triggers="mouseenter:mouseleave" placement="right">{{transactionId}}</p>
+
+
+<ng-template #popContent>
+    {{t.amount | currency: 'GBP'}} from {{debitAccountName}} to {{creditAccountName}} at {{t.transactionDate | date: 'hh:mm dd/MM/yy'}}
+    Created by {{t.createdByUserId}} at {{t.createdDate|date: 'hh:mm dd/MM/yy'}}
+</ng-template>
+<ng-template #popTitle>{{t.name}}</ng-template>

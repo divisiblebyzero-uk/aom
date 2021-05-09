@@ -42,4 +42,16 @@ export class AccountsDataServiceService {
     return stringArr.join('-');
   }
 
+  public getAccountId(name: string): string {
+    return this.accounts.find(a => a.name === name).id;
+  }
+
+  public getAccount(id: string): Account {
+    return this.accounts.find(a => a.id === id);
+  }
+
+  public getTransaction(id: string): Transaction {
+    return this.transactions.find(t => t.id === id);
+  }
+
 }

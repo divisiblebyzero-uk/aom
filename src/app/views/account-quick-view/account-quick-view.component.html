@@ -1,0 +1,7 @@
+<p [ngbPopover]="popContent" [popoverTitle]="popTitle" [openDelay]="300" [closeDelay]="500" triggers="mouseenter:mouseleave" placement="right">{{accountId}}</p>
+
+
+<ng-template #popContent>
+    Created by {{a.createdByUserId}} at {{a.createdDate|date: 'hh:mm dd/MM/yy'}}
+</ng-template>
+<ng-template #popTitle>{{a.name}}</ng-template>

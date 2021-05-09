@@ -10,7 +10,7 @@
         <th>Data</th>
     </tr>
     <tr *ngFor="let a of accounts">
-        <td>{{a.id}}</td>
+        <td><app-account-quick-view [accountId]="a.id"></app-account-quick-view></td>
         <td>{{a.name}}</td>
         <td>{{a|json}}</td>
     </tr>
@@ -28,12 +28,17 @@
         <th>Data</th>
     </tr>
     <tr *ngFor="let t of transactions">
-        <td>{{t.id}}</td>
-        <td>{{t.transactionDate}}</td>
-        <td>{{t.debitAccountId}}</td>
-        <td>{{t.creditAccountId}}</td>
+        <td><app-transaction-quick-view [transactionId]="t.id"></app-transaction-quick-view></td>
+        <td>{{t.transactionDate | date: 'hh:mm dd/MM/yy'}}</td>
+        <td>
+            <app-account-quick-view [accountId]="t.debitAccountId"></app-account-quick-view>
+        </td>
+        <td>
+            <app-account-quick-view [accountId]="t.creditAccountId"></app-account-quick-view>
+        </td>
         <td>{{t.description}}</td>
-        <td>{{t.amount}}</td>
+        <td>{{t.amount | currency: 'GBP'}}</td>
         <td>{{t|json}}</td>
     </tr>
+
 </table>

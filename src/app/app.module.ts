@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { SetupDataComponent } from './admin/setup-data/setup-data.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { AccountQuickViewComponent } from './views/account-quick-view/account-quick-view.component';
+import { TransactionQuickViewComponent } from './views/transaction-quick-view/transaction-quick-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SetupDataComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AccountQuickViewComponent,
+    TransactionQuickViewComponent
   ],
   imports: [
     BrowserModule,

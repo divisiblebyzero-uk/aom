@@ -60,10 +60,10 @@ export class SetupDataComponent implements OnInit {
     this.createTransaction("Current", "Mortgage", 500, "Mortgage on property");
   }
 
-  createTransaction(debitAccountId: string, creditAccountId: string, amount: number, description: string) {
+  createTransaction(debitAccountName: string, creditAccountName: string, amount: number, description: string) {
     const t: Transaction = {
-      debitAccountId: debitAccountId,
-      creditAccountId: creditAccountId,
+      debitAccountId: this.data.getAccountId(debitAccountName),
+      creditAccountId: this.data.getAccountId(creditAccountName),
       amount: amount,
       description: description,
       transactionDate: new Date(),
