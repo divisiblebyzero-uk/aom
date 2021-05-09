@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'aom3';
+  title = 'Accounts o Matic';
+  public isMenuCollapsed = true;
 }
