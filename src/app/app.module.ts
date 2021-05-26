@@ -8,6 +8,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AccountQuickViewComponent } from './views/account-quick-view/account-quick-view.component';
 import { TransactionQuickViewComponent } from './views/transaction-quick-view/transaction-quick-view.component';
+import { UploadDataComponent } from './upload-data/upload-data.component';
+import { DragDropFileUploadDirective } from './drag-drop-file-upload.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -15,12 +19,15 @@ import { TransactionQuickViewComponent } from './views/transaction-quick-view/tr
     SetupDataComponent,
     WelcomeComponent,
     AccountQuickViewComponent,
-    TransactionQuickViewComponent
+    TransactionQuickViewComponent,
+    UploadDataComponent,
+    DragDropFileUploadDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
